@@ -16,7 +16,7 @@ $$
 \text{similarity}(\mathbf{v}_q, \mathbf{v}_d) = \frac{\mathbf{v}_q \cdot \mathbf{v}_d}{\|\mathbf{v}_q\| \|\mathbf{v}_d\|}
 $$
 
-where $ \mathbf{v}_d $ is the embedding of a document. The top-k most similar documents are retrieved, providing grounded, factual context.
+where $\mathbf{v}_d$ is the embedding of a document. The top-k most similar documents are retrieved, providing grounded, factual context.
 
 3. **Augmentation Stage**: The retrieved documents are combined with the original query to form an augmented prompt. This enriched input includes instructions for the LLM to use the provided context, ensuring the generation is informed by external knowledge.
 

@@ -2,7 +2,7 @@
 
 RNNs are a class of neural networks designed to handle sequential data, where the order of elements matters, such as time series, text, or speech. Unlike feedforward networks, RNNs maintain a hidden state that captures information from previous inputs, allowing them to process sequences of variable length. This makes them suitable for tasks like predicting the next character in a sequence.
 
-The core idea is a recurrent loop: at each time step $ t $, the network takes an input $ x_t $, updates its hidden state $ h_t $ based on $ x_t $ and the previous hidden state $ h_{t-1} $, and produces an output $ y_t $. Mathematically, this is expressed as:
+The core idea is a recurrent loop: at each time step $t$, the network takes an input $x_t$, updates its hidden state $h_t$ based on $x_t$ and the previous hidden state $h_{t-1}$, and produces an output $y_t$. Mathematically, this is expressed as:
 
 $$
 h_t = \tanh(W_{xh} x_t + W_{hh} h_{t-1} + b_h)
@@ -12,7 +12,7 @@ $$
 y_t = W_{hy} h_t + b_y
 $$
 
-Here, $ W_{xh} $, $ W_{hh} $, and $ W_{hy} $ are weight matrices, $ b_h $ and $ b_y $ are biases, and $ \tanh $ is the activation function. For prediction tasks like character generation, we apply a softmax function to $ y_t $ to obtain probabilities.
+Here, $W_{xh}$, $W_{hh}$, and $W_{hy}$ are weight matrices, $b_h$ and $b_y$ are biases, and $\tanh$ is the activation function. For prediction tasks like character generation, we apply a softmax function to $y_t$ to obtain probabilities.
 
 Training involves backpropagation through time (BPTT), where gradients are computed backward across the sequence to update weights. We use cross-entropy loss for classification tasks.
 
@@ -24,7 +24,7 @@ To enable accurate predictions, a typical RNN implementation includes some typic
 - **Hidden size**: Dimensionality of the hidden state, controlling model capacity.
 - **Output size**: Dimensionality of the output (e.g., number of possible characters).
 - **Learning rate**: Step size for gradient descent updates.
-- **Weights and biases**: $ W_{xh} $, $ W_{hh} $, $ W_{hy} $, $ b_h $, $ b_y $, initialized randomly.
+- **Weights and biases**: $W_{xh}$, $W_{hh}$, $W_{hy}$, $b_h$, $b_y$, initialized randomly.
 - **Activation**: Tanh for hidden states, softmax for outputs.
 - **Loss function**: Cross-entropy for next-character prediction.
 - **Gradient clipping**: To mitigate exploding gradients during BPTT.

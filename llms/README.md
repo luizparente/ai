@@ -151,19 +151,19 @@ The tokenization process involves several steps:
 
 ### Mathematical Representation
 
-In tokenization, a text sequence $ S $ is transformed into a sequence of tokens $ T $:
+In tokenization, a text sequence $S$ is transformed into a sequence of tokens $T$:
 
 $ S = "\text{Natural language processing}" $
 
 $ T = [t_1, t_2, t_3, ..., t_n] $
 
-where each $ t_i $ represents a token, and $ n $ is the total number of tokens.
+where each $t_i$ represents a token, and $n$ is the total number of tokens.
 
-For vocabulary mapping, each token $ t_i $ is assigned a unique integer identifier:
+For vocabulary mapping, each token $t_i$ is assigned a unique integer identifier:
 
 $ vocab(t_i) = v_i \in \mathbb{N} $
 
-where $ v_i $ is the vocabulary index for token $ t_i $.
+where $v_i$ is the vocabulary index for token $t_i$.
 
 ### Preprocessing Integration
 

@@ -30,7 +30,7 @@ $$
 
 - **Stride**: Determines how many pixels the filter moves at each step. A stride of 1 means the filter shifts one pixel at a time.
 - **Padding**: Adds borders to the input to control the output size, such as "same" padding which preserves dimensions.
-- **Activation**: Typically, a ReLU (Rectified Linear Unit) function is applied: $$f(x) = \max(0, x)$$, introducing non-linearity.
+- **Activation**: Typically, a ReLU (Rectified Linear Unit) function is applied: $f(x) = \max(0, x)$, introducing non-linearity.
 
 Multiple filters in a layer detect various features, like edges in early layers or complex shapes in deeper ones.
 
